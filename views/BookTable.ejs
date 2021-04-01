@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Awaiken Theme">
+    <!-- Page Title -->
+    <title>The Coffee Shop</title>
+    <!-- Google Fonts css-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900%7CPlayfair+Display:400,700,900" rel="stylesheet">
+    <!-- Bootstrap css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!-- Font Awesome icon css-->
+    <link href="css/font-awesome.min.css" rel="stylesheet" media="screen">
+    <link href="css/pe-icon-7-stroke.css" rel="stylesheet" media="screen">
+    <link href="css/flaticon.css" rel="stylesheet" media="screen">
+    <!-- Carousel css -->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <!-- Magnific Popup CSS -->
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    <!-- Slick nav css -->
+    <link rel="stylesheet" href="css/slicknav.css">
+    <!-- Grid Gallery css -->
+    <link rel="stylesheet" data-template-style="true" type="text/css" href="css/CSTiles-1.1.0.css">
+    <!-- Main custom css -->
+    <link href="css/custom.css" rel="stylesheet" media="screen">
+
+</head>
+
+<body data-spy="scroll" data-target="#navigation" data-offset="75">
+    <!-- Preloader starts -->
+    <div class="preloader">
+        <div class="browser-screen-loading-content">
+            <div class="loading-dots dark-gray">
+                <img src="images/puff.svg" alt="Preloader" />
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Ends -->
+
+    <!-- Header Section Starts-->
+    <header>
+        <nav id="main-nav" class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <!-- Logo starts -->
+                    <a class="navbar-brand" href="#">
+                        <img src="images/logo.png" alt="Logo" />
+                    </a>
+                    <!-- Logo Ends -->
+
+                    <!-- Responsive Menu button starts -->
+                    <div class="navbar-toggle">
+                    </div>
+                    <!-- Responsive Menu button Ends -->
+                </div>
+
+                <div id="responsive-menu"></div>
+
+                <!-- Navigation starts -->
+                <div class="navbar-collapse collapse" id="navigation">
+                    <ul class="nav navbar-nav navbar-right main-navigation" id="main-menu">
+                        <li>
+                            <a href="BookTable">Book Table</a>
+                        </li>
+                        <li>
+                            <a href="ViewBookings">View Bookings</a>
+                        </li>
+                        <li>
+                            <a href="Menus">Menus</a>
+                        </li>
+                        <li>
+                            <a href="Logout">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Navigation Ends -->
+            </div>
+        </nav>
+    </header>
+    <!-- Header Section Ends-->
+
+    <!-- Banner Section Starts -->
+    <section class="banner" id="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="banner-desc">
+                        <p>Welcome The Coffee Shop</p>
+                        <h2>Highest Quality Coffee shop</h2>
+                        <!-- <div class="btn-intro">
+                            <a href="https://www.youtube.com/watch?v=Q6dsRpVyyWs" class="popup-video">
+                                <div class="icon-box"><i class="fa fa-play"></i></div>
+                                Quick Tour
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner Section Ends -->
+
+
+
+
+
+    <!-- Contact us section starts -->
+    <section class="contactus" id="contact">
+        <div class="google-map">
+
+
+
+
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="contact-box">
+                        <div class="row">
+
+
+                            <div class="col-md-12">
+                                <div id="content" style="width: 1000px;">
+                                    <%
+                                if(alert=="success")
+                                {
+                                    %>
+                                        <span style="text-align:center;color:green;font-size:20px">Table Booked Successfully</span>
+                                        <%
+                                }
+                              %>
+                                            <%
+                                if(alert=="fail")
+                                {
+                                    %>
+                                                <span style="text-align:center;color:rgb(221, 14, 14);font-size:20px">Table AlreTaken</span>
+                                                <%
+                                }
+                                %>
+                                                    <h2 style="text-align: center;">Booking Coffee Table</h2>
+                                                    <table align="center">
+                                                        <form action="AddBooking" method="POST">
+                                                            <tr>
+                                                                <td> Select Table: </td>
+                                                                <td>
+                                                                    <select class="form-control" name="table" required>
+                                             <option value="">Select</option>
+                                             <option value="Table 1">Table 1</option>
+                                             <option value="Table 2">Table 2</option>
+                                             <option value="Table 3">Table 3</option>
+                                             <option value="Table 4">Table 4</option>
+                                            
+                                          </select>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Select Data time:</td>
+                                                                <td>
+                                                                    <input class="form-control" type="date" name="bdate" required/>
+                                                                </td>
+                                                                <td>
+
+                                                                    <select class="form-control" name="time" required>
+                                            <option value="">Select Time</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                           
+                                         </select>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan=2 align="center"><input class="btn-custom" type="submit" /></td>
+                                                            </tr>
+
+                                                        </form>
+                                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact us section ends -->
+
+    <!-- Footer section starts -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="siteinfo">
+                        <p>Copyright &copy; Untitled. All rights reserved. Design By <a href="#" target="_blank">The Coffee Shop</a> </p>
+                    </div>
+
+
+
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                        <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.pinterest.co.uk/"><i class="fa fa-pinterest-p"></i></a>
+                        <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
+
+                        <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer section ends -->
+
+    <!-- Jquery Library File -->
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <!-- SmoothScroll -->
+    <script src="js/SmoothScroll.js"></script>
+    <!-- Bootstrap js file -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <!-- Slick Nav js file -->
+    <script src="js/jquery.slicknav.js"></script>
+    <!-- Magnific Popup js file -->
+    <script src="js/jquery.magnific-popup.js"></script>
+    <!-- Owl Carousel js file -->
+    <script src="js/owl.carousel.js"></script>
+    <!-- CS Tiles Gallery js file -->
+    <script src="js/jquery.CSTiles-1.1.0.min.js"></script>
+    <!-- Main Custom js file -->
+    <script src="js/function.js"></script>
+</body>
+
+</html>
